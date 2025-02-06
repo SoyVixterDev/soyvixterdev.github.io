@@ -1,9 +1,5 @@
-export default 
-{
-    base:"/soyvixterdev.github.io/",
-    server: 
-    {
-        port: 5173,
-        open: true,
-    }
-};
+import { defineConfig } from "vite";
+
+export default defineConfig({
+    base: "/soyvixterdev.github.io/",
+});
