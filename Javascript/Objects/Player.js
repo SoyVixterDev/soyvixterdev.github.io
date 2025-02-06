@@ -1,4 +1,4 @@
-import { CylinderGeometry, Mesh, MeshLambertMaterial, Vector3 } from "three";
+import { CylinderGeometry, Mesh, MeshLambertMaterial, Vector3 } from "./node_modules/three/build/three.module.js";
 import { PhysicsObject } from "../Physics/PhysicsObject";
 import { SceneManager } from "../SceneManager";
 

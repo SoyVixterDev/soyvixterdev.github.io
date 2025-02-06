@@ -1,4 +1,4 @@
-import { Mesh, MeshLambertMaterial, SphereGeometry } from "three";
+import { Mesh, MeshLambertMaterial, SphereGeometry } from "./node_modules/three/build/three.module.js";
 import { SphereCollider } from "../Physics/SphereCollider";
 import { PhysicsObject } from "../Physics/PhysicsObject";
 import { PhysicsManager } from "../Physics/PhysicsManager";

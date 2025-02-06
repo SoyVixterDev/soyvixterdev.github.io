@@ -1,4 +1,4 @@
-import { Mesh, MeshBasicMaterial, SphereGeometry, Vector3 } from "three";
+import { Mesh, MeshBasicMaterial, SphereGeometry, Vector3 } from "./node_modules/three/build/three.module.js";
 import { Contact } from "./Contact";
 import { PhysicsManager } from "./PhysicsManager";
 import { SceneManager } from "../SceneManager";

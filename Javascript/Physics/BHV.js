@@ -1,4 +1,4 @@
-import { Sphere, Vector3 } from "three";
+import { Sphere, Vector3 } from "./node_modules/three/build/three.module.js";
 import { PotentialContact } from "./Contact";
 import { PhysicsObject } from "./PhysicsObject";
 
