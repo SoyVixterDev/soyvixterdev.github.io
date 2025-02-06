@@ -1,4 +1,4 @@
-import { Vector3 } from "./node_modules/three/build/three.module.js";
+import { Vector3 } from "three";
 import { CollisionManager } from "./CollisionManager";
 
 export class PhysicsManager

@@ -1,4 +1,4 @@
-import { Scene } from "./node_modules/three/build/three.module.js";
+import { Scene } from "three";
 
 /**
  * Class encapsulating from scene management to rendering

@@ -1,4 +1,4 @@
-import { Quaternion, Vector3 } from "./node_modules/three/build/three.module.js"
+import { Quaternion, Vector3 } from "three"
 import { SphereCollider } from "./SphereCollider";
 import { PhysicsManager } from "./PhysicsManager";
 import { CollisionManager } from "./CollisionManager";

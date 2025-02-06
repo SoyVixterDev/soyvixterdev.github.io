@@ -1,6 +1,6 @@
 import { InputManager } from "./Input/InputManager.js";
 import { SceneManager } from "./SceneManager.js";
-import { WebGLRenderer, PerspectiveCamera, Vector3, MathUtils, DirectionalLight, MeshLambertMaterial, AmbientLight, Object3D } from "./node_modules/three/build/three.module.js";
+import { WebGLRenderer, PerspectiveCamera, Vector3, MathUtils, DirectionalLight, MeshLambertMaterial, AmbientLight, Object3D } from "three";
 import { PhysicsManager } from "./Physics/PhysicsManager.js";
 import { Player } from "./Objects/Player.js";
 import { Planet } from "./Objects/Planet.js";
