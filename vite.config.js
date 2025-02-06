@@ -1,8 +1,9 @@
 export default 
 {
-    server: 
-    {
-      port: 5173,
-      open: true,
-    }
+  base: "/soyvixterdev.github.io/",
+  server: 
+  {
+    port: 5173,
+    open: true,
+  }
 };
