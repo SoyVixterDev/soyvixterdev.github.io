@@ -24,7 +24,7 @@ export class Planet extends PhysicsObject
         this.gravitationalPullRadius = gravitationalPullRadius;
 
         this.InitPhysics(radius);
-
+        this.tag = "Planet";
         this.invMass = 0;
     }
 
@@ -44,7 +44,7 @@ export class Planet extends PhysicsObject
 
 
                 object.CalculateGravityDirection(this.mesh.position);
-                object.ApplyGravity((this.gravityStrength * 100 * step) / (distance * distance));
+                object.ApplyGravity((this.gravityStrength * 100 * step) / (distance));
             }
         });
 

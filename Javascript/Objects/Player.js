@@ -1,11 +1,12 @@
 import { CylinderGeometry, Mesh, MeshLambertMaterial, Vector3 } from "three";
 import { PhysicsObject } from "../Physics/PhysicsObject";
 import { SceneManager } from "../SceneManager";
+import { PhysicsManager } from "../Physics/PhysicsManager";
 
 export class Player extends PhysicsObject
 {
-    movementSpeed = 2;
-    jumpStrength = 5;
+    movementSpeed = 7;
+    jumpStrength = 12;
 
     constructor(position)
     {
@@ -21,4 +22,22 @@ export class Player extends PhysicsObject
 
         this.InitPhysics();
     }    
+
+    ManageMovement(inputVector, jump)
+    {
+        let downDir = this.gravityDirection.clone();
+
+        let inputVel = inputVector.clone().multiplyScalar(this.movementSpeed);
+        let localVel = this.velocity.clone().applyQuaternion(this.mesh.quaternion.clone().invert());
+        let newVel = new Vector3(inputVel.x, localVel.y, inputVel.y);
+        newVel.applyQuaternion(this.mesh.quaternion); 
+
+        this.velocity.copy(newVel);
+
+        if(jump && PhysicsManager.CheckSphere(this.mesh.position.clone().addScaledVector(downDir, 1), 0.01, ["Planet"]).length != 0)
+        {
+            console.log("Jump!");
+            this.velocity = (downDir.multiplyScalar(-this.jumpStrength));
+        }
+    }
 }

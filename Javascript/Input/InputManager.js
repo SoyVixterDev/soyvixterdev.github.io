@@ -8,7 +8,8 @@ export class InputManager
         w: false,
         a: false,
         s: false,
-        d: false
+        d: false,
+        space: false
     }
 
     constructor()
@@ -16,8 +17,10 @@ export class InputManager
         //Updates the tracked keys to true when pressed
         document.addEventListener("keydown", (event) => 
         {
-            const key = event.key.toLowerCase();
+            let key = event.key.toLowerCase();
     
+            if(key === " ") key = "space";
+
             if (key in this.trackedkeys) 
             {
                 this.trackedkeys[key] = true;
@@ -27,8 +30,10 @@ export class InputManager
         //Updates the tracked keys to false when released
         document.addEventListener("keyup", (event) => 
         {
-            const key = event.key.toLowerCase();
+            let key = event.key.toLowerCase();
             
+            if(key === " ") key = "space";
+
             if (key in this.trackedkeys)
             {
                 this.trackedkeys[key] = false;
